@@ -1,37 +1,157 @@
-alert ("Hello") 
+alert("Hello")
+/*Напишите функцию, которая принимает два числовых аргумента и возвращает наименьшее из них.
+ */
+// function getMin(){
+//     const num1 = +prompt("Input num1")
+//     const num2 = +prompt("Input num2")
+//     const result = Math.min(num1,num2)
+//     console.log(result)
+// }
+// getMin()
+// /*Напишите функцию, которая принимает два числовых аргумента и выводит в консоль все четные числа от большего к меньшему.
+//  */
+// function getEven(){
+//     const num1 = +prompt("Input num1")
+//     const num2 = +prompt("Input num2")
+//     const min = Math.min(num1,num2)
+//     const max = Math.max(num1,num2)
+//     for(let i = min; i <= max; i++){
+//         if(i%2==0){
+//             console.log(i)
+//                     }
+//     }
+// }
 
- for(let i = 0; i<=10; i+=2){
-     console.log(i);    
- }
+// getEven()
 
- for(let i = 55; i>=20 ; i--){
-     console.log(i)
- }
+/**Напишите функцию power, которая принимает два числовых аргумента (основание степени и саму степень) и
+ * возвращает число в указанной степени. Значение степени должно быть указано по умолчанию 2.
+ */
 
-const numbers = [3, 5, 11, 2, 8, 1, 6];
-  for(let i = 0; i < numbers.length; i++){
-      console.log(numbers[i])
-  }
 
-console.log(`numbers = [${numbers[0]},${numbers[1]},${numbers[2]},${numbers[3]},${numbers[4]},${numbers[5]},${numbers[6]}]`)
+// function takePow(){
+//     const num1 = +prompt("Input num1")
+//     const num2 = 2
+//     const result = Math.pow(num1,num2)
+//     console.log(result)
+// }
 
-const numbers_sqared = []
-for(let i = 0; i < numbers.length; i ++){
-   numbers_sqared.push(numbers[i]*numbers[i])
-}
-console.log(numbers_sqared)
-console.log(`numbers_sqared = [${numbers_sqared[0]},${numbers_sqared[1]},${numbers_sqared[2]},${numbers_sqared[3]},${numbers_sqared[4]},${numbers_sqared[5]},${numbers_sqared[6]}]`)
+// takePow()
 
-const last_elem = numbers_sqared[numbers_sqared.length - 1]
-console.log(`last_elem = ${last_elem}`)
-console.log(`last_elem = ${numbers_sqared[numbers_sqared.length - 1]}`)
+/*Напишите функцию, которая принимает числовой аргумент n и считает сумму чисел от 1 до n.
+ */
+//  function takeSum(){
+//     const n = +prompt("Input number")
+//        let sum = 0
+//        for(let i = 1; i <= n; i++ ){
+//            sum = sum + i 
+//                } console.log(sum)
+//    }
 
-const user = {
-    first_name: 'Ivan', 
-    last_name: 'Ivanov', 
-    age: 20, 
-    salary: 500
-    }
-    console.log(`User's name is ${user.first_name} ${user.last_name}. He is ${user.age} yaers old.`)
+//    takeSum()
+
+//Напишите функцию, которая принимает два числовых аргумента n и m и считает сумму четных чисел и нечетных чисел от n до m.
+// Суммы выведите в консоль (в начале сумму четных чисел, а затем сумму нечетных).
+//  
+// function takeEvenOdd(){
+//   const n = +prompt("Input n")
+//   const m = +prompt("Input m")
+//   let sumEV = 0
+//   let sumOd = 0
+//     for(let i = n; i <= m; i++){
+//      if(i%2===0){
+//      console.log(`Чётное число ${i}`)       
+//              sumEV = sumEV + i 
+//                 } console.log(`Сумма чётных чисел равна ${sumEV}`)}
+
+//     for(let i = n; i <= m; i++) {
+//       if(!i%2==0){
+//        console.log(`Нечётное число ${i}`)
+//        sumOd = sumOd + i
+//      }    console.log(`Сумма нечётных чисел равна ${sumOd}`)       
+//                   }
+//              }      
+                 
+//               takeEvenOdd()
+
+
+
+//  Программа отрабатывает отрицательный диапазон 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Напишите функцию, которая принимает два числовых аргумента n и m и считает сумму четных чисел и нечетных чисел от n до m.
+// Суммы выведите в консоль (в начале сумму четных чисел, а затем сумму нечетных).
+ 
+function takeEvenOdd(){
+   const n = +prompt("Input n")
+   const m = +prompt("Input m")
+   let sumEV = 0
+   let sumOd = 0
+     for(let i = n; i <= m; i++){
+      if(i%2===0){
+      console.log(`Чётное число ${i}`)       
+              sumEV = sumEV + i 
+                 } console.log(`Сумма чётных чисел равна ${sumEV}`)}
+
+     for(let i = n; i <= m; i++) {
+      if(i%2==1){
+        console.log(`Нечётное число ${i}`)
+        sumOd = sumOd + i
+      }    console.log(`Сумма нечётных чисел равна ${sumOd}`)       
+                   }
+              }      
+                 
+               takeEvenOdd()
+
+////// Программа не работает в отрицательном диапазоне ?!
+
+
+
+
+
+
+//  Напишите функцию, которая принимает в качестве аргументов массив строк, а возвращает первый самый длинный элемент массива.
+//  Если входной массив пуст, функция возвращает null. Если есть несколько одинаковых по длине элементов - функция возвращает первый из этих элементов. 
+// Пример: [ 'one', 'two', 'three' ] => 'three'
+//              
+
+// function longElem(){
+//      const massive = ['jjl'.length,'hdhdhl'.length,'sgdgsdfg'.length,'bgbahahaajaja'.length,'qtywexxbnznz'.length]
+     
+//      if(massive.length==0){
+//       console.log(null)
+//     }
+//       console.log(`Массив содержит ${massive.length}  элементов`)
+
+//       for(let i = 0; i < massive.length; i++){
+//           console.log(`${i}-тый элемент массива : " ${massive[i]}`)
+//         }
+
+
+
+//           for(let i = 0; i < massive.length; i++){
+                    
+              
+//               if ( massive[i] == massive[i+1]){
+//               console.log(`Первый одинаковый элемент массива на "${i}-м" месте со значением ${massive[i]}`)                
+//                 }
+//               if(massive[i] > massive[i+1]){
+//                  console.log(`Самый длинный элемент массива "${i}-й" со значением ${massive[i]}`)
+//            }
+//      }
+// }
+ 
+//  longElem()
+
+
+ 
+
+
+
+
+
+
 
 
